@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Title</title>
+{% endblock %}
+{% block content %}
+
+        <form method="post">
+            {% csrf_token %}
+            <h1>do you really want to cancel ticket</h1>
+            <button>YES</button>
+            <a href="{% url 'show_url' %}">
+                <button type="button">NO</button>
+            </a>
+        </form>
+
+{% endblock %}

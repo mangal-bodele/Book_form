@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+{% block title %}
+        <title>Title</title>
+{% endblock %}
+{% block content %}
+    <form  class="border border-4 col-3 p-3 m-auto mt-5" method="post">
+        {% csrf_token %}
+        <h3 class="text-center text-primary">book form</h3>
+        {{ form.as_p }}
+        <input type="submit" value="add">
+        <input type="reset" value="cancel">
+    </form>
+
+{% endblock %}
